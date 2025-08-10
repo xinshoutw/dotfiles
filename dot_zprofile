@@ -1,0 +1,5 @@
+# SSH Agent Socket
+export SSH_AUTH_SOCK=~/.bitwarden-ssh-agent.sock
+
+# X11 Display
+export DISPLAY=:0

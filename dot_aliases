@@ -1,0 +1,22 @@
+# Force sudo
+alias btop="sudo btop"
+alias top="sudo btop"
+alias nmap="sudo nmap"
+
+# Java
+alias java11="/Library/Java/JavaVirtualMachines/microsoft-11.jdk/Contents/Home/bin/java"
+alias java17="/Library/Java/JavaVirtualMachines/microsoft-17.jdk/Contents/Home/bin/java"
+alias java21="/Library/Java/JavaVirtualMachines/microsoft-21.jdk/Contents/Home/bin/java"
+alias java24="/Users/xinshou/Library/Java/JavaVirtualMachines/openjdk-24.0.1/Contents/Home/bin/java"
+
+alias ttop="/usr/bin/top"
+alias pc='proxychains4'
+alias py="python3"
+alias cls="clear"
+alias ncl="nc -nvl"
+alias lll="ls -hcltr"
+alias x86="arch -x86_64 /usr/bin/env zsh"
+alias arm="arch -arm64 zsh"
+alias pi='ssh xs-pi'
+
+

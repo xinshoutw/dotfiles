@@ -1,0 +1,148 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
+  "schemes" : [
+    {
+      "if" : {
+        "device" : {
+          "productName" : "Model O Wireless",
+          "serialNumber" : "000000000000",
+          "vendorID" : "0x258a",
+          "category" : "mouse",
+          "productID" : "0x2011"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "distance" : {
+          "vertical" : 3
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0.7,
+        "disableAcceleration" : true
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "vendorID" : "0x258a",
+          "productID" : "0x2022",
+          "productName" : "Model O Wireless",
+          "serialNumber" : "000000000000",
+          "category" : "mouse"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : 2
+        },
+        "speed" : {
+          "vertical" : 0
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "modifiers" : {
+          "vertical" : {
+            "shift" : {
+              "type" : "preventDefault"
+            }
+          }
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0.7,
+        "disableAcceleration" : true
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productID" : "0x342",
+          "vendorID" : "0x5ac",
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "category" : "trackpad"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : false
+        },
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "vendorID" : "0x4c",
+          "serialNumber" : "BC:D0:74:BA:DC:DE",
+          "category" : "trackpad",
+          "productID" : "0x265",
+          "productName" : "XinShou’s Magic Trackpad"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "serialNumber" : "BC:D0:74:BA:DC:DE",
+          "productName" : "xinshoutw's Magic Trackpad",
+          "vendorID" : "0x4c",
+          "productID" : "0x265",
+          "category" : "trackpad"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productID" : "0x1cad",
+          "vendorID" : "0x9da",
+          "category" : "mouse",
+          "productName" : "USB Device "
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        },
+        "acceleration" : {
+          "vertical" : 0
+        },
+        "speed" : {
+          "vertical" : 15.12
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0,
+        "speed" : 0.2444
+      }
+    }
+  ]
+}

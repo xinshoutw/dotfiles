@@ -1,0 +1,20 @@
+[user]
+	name = xinshoutw
+	email = me@xinshou.tw
+	signingkey = 537D24B3C9D68DA7
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[core]
+	editor = vim
+	autocrlf = input
+[init]
+	defaultbranch = main
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2
+[tag]
+	gpgSign = true

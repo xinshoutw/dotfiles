@@ -1,0 +1,15 @@
+Host *
+  UseKeychain yes
+
+Host xs-pi
+  HostName pi.xinshou.tw
+  Port 25
+  User xinshou
+  PreferredAuthentications publickey
+  
+# VM
+Host xs-ubuntu
+  HostName 10.211.55.7
+  Port 22
+  User b11315009
+

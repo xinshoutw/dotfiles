@@ -1,17 +1,15 @@
-{{- $xinshoutw_pi      := bitwarden "xinshoutw Pi"        -}}
-{{- $xinshoutw_pi_host := $xinshoutw_pi | getField "host" -}}
-{{- $xinshoutw_pi_port := $xinshoutw_pi | getField "port" -}}
-{{- $xinshoutw_pi_user := $xinshoutw_pi | getField "user" -}}
+# --- Load Variables ---
+{{- $xinshoutw_pi_host := (bitwardenFields "item" "xinshoutw Pi").host.value -}}
+{{- $xinshoutw_pi_port := (bitwardenFields "item" "xinshoutw Pi").port.value -}}
+{{- $xinshoutw_pi_user := (bitwardenFields "item" "xinshoutw Pi").user.value -}}
 
-{{- $sam_karakeep      := bitwarden "Sam Karakeep"        -}}
-{{- $sam_karakeep_host := $sam_karakeep | getField "host" -}}
-{{- $sam_karakeep_port := $sam_karakeep | getField "port" -}}
-{{- $sam_karakeep_user := $sam_karakeep | getField "user" -}}
+{{- $sam_karakeep_host := (bitwardenFields "item" "Sam Karakeep").host.value -}}
+{{- $sam_karakeep_port := (bitwardenFields "item" "Sam Karakeep").port.value -}}
+{{- $sam_karakeep_user := (bitwardenFields "item" "Sam Karakeep").user.value -}}
 
-{{- $wavjaby_vps       := bitwarden "WavJaby VPS"         -}}
-{{- $wavjaby_vps_host  := $wavjaby_vps  | getField "host" -}}
-{{- $wavjaby_vps_port  := $wavjaby_vps  | getField "port" -}}
-{{- $wavjaby_vps_user  := $wavjaby_vps  | getField "user" -}}
+{{- $wavjaby_vps_host  := (bitwardenFields "item" "WavJaby VPS").host.value -}}
+{{- $wavjaby_vps_port  := (bitwardenFields "item" "WavJaby VPS").port.value -}}
+{{- $wavjaby_vps_user  := (bitwardenFields "item" "WavJaby VPS").user.value -}}
 
 
 # --- External Server (Protect by Bitwarden) ---

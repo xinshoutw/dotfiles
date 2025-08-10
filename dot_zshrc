@@ -171,4 +171,6 @@ starttransfer:  %{time_starttransfer}s\n\
 
 . "$HOME/.local/bin/env"
 
+export SSH_AUTH_SOCK=/Users/xinshou/.bitwarden-ssh-agent.sock
+
 eval "$(zoxide init zsh --cmd cd)"

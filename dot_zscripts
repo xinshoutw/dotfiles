@@ -9,3 +9,37 @@ starttransfer:  %{time_starttransfer}s\n\
 -------------------------\n\
         total:  %{time_total}s\n" "$@"
 }
+
+ytdl() {
+	local format="${2:-mp4}"
+
+	yt-dlp -f "bestvideo+bestaudio" "$1" --merge-output-format "$format"
+}
+
+toh264() {
+  if [ -z "$1" ]; then
+    echo "Error: Please provide an input file path."
+    echo "Usage: toh264 <input_file> [output_file]"
+    return 1
+  fi
+
+  local source_bitrate=$(ffprobe -v error -select_streams v:0 -show_entries stream=bit_rate -of default=noprint_wrappers=1:nokey=1 "$1")
+
+  if [ -z "$source_bitrate" ]; then
+    echo "Error: Could not detect video bitrate for '$1'."
+    return 1
+  fi
+
+  local target_bitrate_k=$(($source_bitrate / 1000))
+
+  local output_file="${2:-"${1%.*}_h264.${1##*.}"}"
+
+  echo "--- Conversion Info ---"
+  echo "Source File: $1"
+  echo "Target Bitrate: ${target_bitrate_k}k"
+  echo "Output File: $output_file"
+  echo "-----------------"
+
+  ffmpeg -i "$1" -c:v h264_videotoolbox -b:v "${target_bitrate_k}k" -c:a copy "$output_file"
+}
+

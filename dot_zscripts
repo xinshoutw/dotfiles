@@ -11,9 +11,29 @@ starttransfer:  %{time_starttransfer}s\n\
 }
 
 ytdl() {
-	local format="${2:-mp4}"
+  if [ -z "$1" ]; then
+    echo "Error: URL is required."
+    echo "Usage: ytdl <URL> [format] [other_yt-dlp_options...]"
+    echo "Example: ytdl \"youtube.com/...\" mkv -N 10"
+    return 1
+  fi
 
-	yt-dlp -f "bestvideo+bestaudio" "$1" --merge-output-format "$format"
+  local url="$1"
+  local format="mp4"
+  shift
+
+  if [[ -n "$1" && "$1" != -* ]]; then
+    format="$1"
+    shift
+  fi
+  
+  echo "---Download Info---"
+  echo "URL: $url"
+  echo "Output Format: $format"
+  echo "Extra Args: $@"
+  echo "-----------------"
+  
+  yt-dlp -f "bestvideo+bestaudio" --merge-output-format "$format" "$url" "$@"
 }
 
 toh264() {

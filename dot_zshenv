@@ -6,7 +6,8 @@ path=(
     "/Applications/Sublime Text.app/Contents/SharedSupport/bin"
     "/opt/pycdc"
     "$HOME/.cache/lm-studio/bin"
-    $path
+	"$HOME/.bin"
+	$path
 )
 
 export ZSH="$HOME/.oh-my-zsh"

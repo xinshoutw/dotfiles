@@ -19,4 +19,5 @@ alias x86="arch -x86_64 /usr/bin/env zsh"
 alias arm="arch -arm64 zsh"
 alias pi='ssh xs-pi'
 
+alias yt-dl="yt-dlp -f "bestvideo+bestaudio" --merge-output-format mp4"
 

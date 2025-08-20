@@ -1,3 +1,8 @@
+{{/* ================================================================== */}}
+{{/* Bitwarden Section: Only run if 'bw' command is available         */}}
+{{/* ================================================================== */}}
+{{- if (lookPath "bw") }}
+
 {{- $xinshoutw_pi_host := (bitwardenFields "item" "SSH xinshoutw Pi").host.value -}}
 {{- $xinshoutw_pi_port := (bitwardenFields "item" "SSH xinshoutw Pi").port.value -}}
 {{- $xinshoutw_pi_user := (bitwardenFields "item" "SSH xinshoutw Pi").user.value -}}
@@ -29,10 +34,16 @@ Host wav-vps
   User {{ $wavjaby_vps_user }}
   PreferredAuthentications publickey
 
+{{- end }}
+{{/* ================================================================== */}}
+{{/* End of Bitwarden Section                                         */}}
+{{/* ================================================================== */}}
+
 
 # --- VM ---
 Host xs-ubuntu
   HostName 10.211.55.7
   Port 22
   User b11315009
+
 

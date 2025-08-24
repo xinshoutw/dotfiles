@@ -1,11 +1,11 @@
 typeset -U path
 path=(
-    "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
-    "/Applications/Sublime Text.app/Contents/SharedSupport/bin"
-    "/opt/pycdc"
-    "$HOME/.cache/lm-studio/bin"
-	"$HOME/.bin"
-	$path
+  $path
+  "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+  "/Applications/Sublime Text.app/Contents/SharedSupport/bin"
+  "/opt/pycdc"
+  "$HOME/.cache/lm-studio/bin"
+  "$HOME/.bin"
 )
 
 export ZSH="$HOME/.oh-my-zsh"

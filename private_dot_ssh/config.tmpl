@@ -14,8 +14,7 @@
 {{- $wavjaby_vps_host  := (bitwardenFields "item" "SSH WavJaby VPS").host.value -}}
 {{- $wavjaby_vps_port  := (bitwardenFields "item" "SSH WavJaby VPS").port.value -}}
 {{- $wavjaby_vps_user  := (bitwardenFields "item" "SSH WavJaby VPS").user.value -}}
-
-{{- $gcp_vps_host  := (bitwardenFields "item" "SSH GCP VPS").user.value -}}
+{{- $gcp_vps_host      := (bitwardenFields "item" "SSH GCP VPS").user.value -}}
 
 # --- External Server (Protect by Bitwarden) ---
 Host xs-pi

@@ -12,5 +12,5 @@ export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='vim'
 export LC_ALL=en_US.UTF-8
 export HOMEBREW_NO_ENV_HINTS=1
-. "$HOME/.cargo/env"
 
+[[ -r "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"

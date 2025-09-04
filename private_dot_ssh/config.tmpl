@@ -34,6 +34,12 @@ Host wav-vps
   User {{ $wavjaby_vps_user }}
   PreferredAuthentications publickey
 
+Host gcp
+  HostName {{ $gcp_vps_host }}
+  Port 22
+  User xinshoutw
+  PreferredAuthentications publickey
+
 {{- end }}
 {{/* ================================================================== */}}
 {{/* End of Bitwarden Section                                         */}}
@@ -45,11 +51,4 @@ Host xs-ubuntu
   HostName 10.211.55.7
   Port 22
   User b11315009
-
-
-Host gcp
-  HostName {{ $gcp_vps_host }}
-  Port 22
-  User xinshoutw
-  PreferredAuthentications publickey
 

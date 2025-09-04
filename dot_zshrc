@@ -16,21 +16,20 @@ plugins=(
 # Source Oh My Zsh
 # =============================================================================
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+  source -s "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source $ZSH/oh-my-zsh.sh
+source -s $ZSH/oh-my-zsh.sh
 
 # =============================================================================
 # User Custom & Tool Init
 # =============================================================================
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-source ~/.aliases
-source ~/.zscripts
+source -s ~/.p10k.zsh
+source -s ~/.aliases
+source -s ~/.zscripts
 
 # sensitive data
-[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
+source -s "$HOME/.local/bin/env"
 
 # jenv
 if command -v jenv &> /dev/null; then
@@ -39,12 +38,17 @@ if command -v jenv &> /dev/null; then
 fi
 
 # zoxide
-eval "$(zoxide init zsh --cmd cd)"
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init zsh --cmd cd)"
+fi
 
 # fzf
-source <(fzf --zsh)
+if command -v fzf &> /dev/null; then
+  source <(fzf --zsh) 2>/dev/null || true
+fi
 
 # x
-[ -f "$HOME/.x-cmd.root/X" ] && . "$HOME/.x-cmd.root/X"
+source -s "$HOME/.x-cmd.root/X"
 
-[ -f "$HOME/.cargo/env"  ] && . "$HOME/.cargo/env"
+source -s "$HOME/.cargo/env"
+

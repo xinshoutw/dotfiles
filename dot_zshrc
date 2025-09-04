@@ -50,5 +50,6 @@ fi
 # x
 source -s "$HOME/.x-cmd.root/X"
 
+# rust
 source -s "$HOME/.cargo/env"
 

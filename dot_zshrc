@@ -24,6 +24,8 @@ source -s $ZSH/oh-my-zsh.sh
 # =============================================================================
 # User Custom & Tool Init
 # =============================================================================
+export GPG_TTY=$(tty)
+
 source -s ~/.p10k.zsh
 source -s ~/.aliases
 source -s ~/.zscripts
